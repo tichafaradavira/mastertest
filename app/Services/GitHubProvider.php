@@ -32,7 +32,7 @@ class GitHubProvider implements RepositoryProviderInterface
          * Instantiate the third party client used to query the github API
          */
         $client = new \GuzzleHttp\Client();
-        $response = $client->get("https://api.github.com/search/repositories?q=language:php&sort=stars&order=desc&per_page=10")
+        $response = $client->get(config('app.github_api')."?q=language:php&sort=stars&order=desc&per_page=10")
             ->getBody();
         $result = json_decode($response, true);
 

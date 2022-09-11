@@ -8,3 +8,9 @@
 7. When install is done run `composer key:generate`
 
 The app is accessed via http://localhost
+
+## Important Directories
+1. /app/Factories 
+2. /app/Http/Controllers
+3. /app/Services
+4. /tests/Unit
